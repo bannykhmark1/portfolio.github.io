@@ -1,0 +1,370 @@
+    a {
+        text-decoration: none;
+    }
+    
+    ._black {
+        color: #000;
+    }
+    
+    ul,
+    ol,
+    li {
+        list-style: none;
+    }
+    
+    body {
+        height: 100%;
+        line-height: 1;
+        font-size: 18px;
+        margin: 0;
+        padding: 0;
+        color: #828282;
+        font-family: Gilroy;
+    }
+    
+    ._container {
+        max-width: 940px;
+        margin: 0px auto;
+    }
+    
+    .wrapper {
+        min-height: 100%;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+    }
+    /* ---------------------------------------- header ---------------------*/
+    
+    .header {
+        width: 100%;
+        left: 0;
+        top: 0;
+        z-index: 50;
+    }
+    
+    .header__container {
+        min-width: 88px;
+        align-items: center;
+        border-bottom: 1px solid #828282;
+        transform: matrix(1, 0, 0, 1, 0, 0);
+    }
+    
+    .nav-item {
+        font-weight: 700;
+        line-height: 88%;
+    }
+    
+    .nav-list {
+        padding: 0px;
+        margin-top: 33px;
+        margin-bottom: 32px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    
+    @media (max-width: 420px) {
+        .nav-item:not(:last-child) {
+            margin-right: 25px;
+        }
+    }
+    
+    @media (max-width: 999px) {
+        ._container {
+            max-width: 95%;
+        }
+    }
+    /*--------------------------main*/
+    
+    .main {
+        flex: 1 1 auto;
+        margin-top: 40px;
+    }
+    
+    .main-block__container {
+        margin-bottom: 104px;
+    }
+    
+    .main-block__container,
+    ._container {
+        height: 100%;
+    }
+    
+    .main-block_info {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 50px;
+    }
+    
+    .main-block_name {
+        max-width: 190px;
+        font-weight: 700;
+        color: #000;
+        font-size: 47px;
+        line-height: 59px;
+    }
+    
+    .main-block_me {
+        max-width: 260px;
+        color: #000;
+        font-weight: 500;
+        line-height: calc(21/18*100%);
+        margin-top: 60px;
+    }
+    
+    .main-block_translate {
+        margin-bottom: 20px;
+        writing-mode: tb-rl;
+        transform: rotate(-180deg);
+        font-size: 40px;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 22px;
+    }
+    
+    .main-block_photo {
+        height: 100%;
+        background: #000 url(img/bg2.jpg);
+        /* Фоновый цвет и фоновый рисунок*/
+        color: #fff;
+        /*Цвет текста на странице*/
+    }
+    
+    @media (max-width: 540px) {
+        .main-block_translate {
+            font-size: 12px;
+        }
+    }
+    
+    @media (max-width: 450px) {
+        .main-block_translate {
+            font-size: 12px;
+        }
+    }
+    
+    @media (max-width: 520px) {
+        .main-block_me {
+            font-size: 16px;
+        }
+    }
+    
+    @media (max-width: 450px) {
+        .main-block_me {
+            font-size: 14px;
+            max-width: 170px;
+        }
+    }
+    
+    @media (max-width: 520px) {
+        .main-block_name {
+            line-height: 23px;
+            max-width: 130px;
+            font-size: 20px;
+        }
+    }
+    /*-------Biography ---------*/
+    
+    .grey {
+        background-color: #F6F6F6;
+    }
+    
+    .main-block_biography {
+        padding-top: 120px;
+        padding-bottom: 107px;
+        max-width: 480px;
+    }
+    
+    .main-block_about-me {
+        text-align: center;
+        font-weight: 700;
+        color: #070707;
+        line-height: 42px;
+    }
+    
+    .main-block_about-me-info p {
+        font-weight: 500;
+        text-align: center;
+        color: #070707;
+        font-size: 18px;
+        line-height: 22px;
+    }
+    /*-----------------skills------------*/
+    
+    .main-block_skills-programs {
+        margin-bottom: 110px;
+        margin-top: 87px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .skills {
+        margin-top: 90px;
+        text-align: center;
+        color: #070707;
+        line-height: 42px;
+    }
+    
+    .skills-info {
+        margin-top: 69px;
+        text-align: center;
+        font-weight: 600;
+        line-height: 22px;
+        color: #070707;
+    }
+    
+    .main-block_skills-programs p {
+        height: 24px;
+        margin-top: 24px;
+        max-width: 100px;
+        text-align: center;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 17px;
+        color: #828282;
+    }
+    
+    .vscode,
+    .git,
+    .js,
+    .htmlcss {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        align-items: center;
+        width: 140px;
+    }
+    
+    .vscode-logo,
+    .git-logo,
+    .js-logo,
+    .htmlcss-logo {
+        width: 90px;
+        height: 90px;
+    }
+    
+    .star {
+        width: 24px;
+        height: 24px;
+    }
+    
+    .stars {
+        margin-top: 40px;
+        align-items: center;
+    }
+    /*----------------PORTFOLIO-----------------*/
+    
+    .portfolio-title {
+        padding-top: 113px;
+        margin-bottom: 47px;
+    }
+    
+    .portfolio-title h1 {
+        font-size: 34px;
+        line-height: 42px;
+        color: #070707;
+        font-weight: 700;
+        text-align: center;
+    }
+    
+    .portfolio-projects {}
+    
+    .portfolio-projects img {
+        width: 937px;
+        height: 510px;
+    }
+    
+    .portfolio-projects a {
+        padding-top: 45px;
+        font-size: 18px;
+        line-height: 22px;
+        text-decoration-line: underline;
+        color: #070707;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .main-block_prortfolio {
+        padding-bottom: 90px;
+    }
+    /*-------------------contacts----------------*/
+    
+    .main-block_contacts {
+        padding-bottom: 123px;
+    }
+    
+    .contacts-title {
+        margin-top: 114px;
+    }
+    
+    .contacts-title h1 {
+        font-size: 34px;
+        line-height: 42px;
+        text-align: center;
+        color: #070707;
+        font-weight: 700;
+    }
+    
+    .contacts-content {
+        display: flex;
+        max-width: 285px;
+        margin: 0 auto;
+    }
+    
+    .contacts-content p {
+        margin-top: 20px;
+        margin-bottom: 30px;
+        font-size: 18px;
+        line-height: 22px;
+        color: #110c0c;
+        text-align: center;
+    }
+    
+    .contacts-button {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 85px;
+    }
+    
+    button {
+        background: #070707;
+        /* Цвет фона */
+        color: #fff;
+        /* Цвет текста */
+        margin: 8px 13px 28px 8px;
+        /* Поля вокруг текста */
+        border-radius: 30px;
+        /* Уголки */
+        width: 180px;
+        height: 42px;
+        text-decoration: none;
+        text-align: center;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 22px;
+        box-shadow: 1px 1px 0px 0px rgba(0, 0, 0, 0.5)
+    }
+    
+    .contacts-socials {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .vk,
+    .tg,
+    .inst,
+    .git-black {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .vk,
+    .tg,
+    .inst {
+        padding-right: 60px;
+    }
+    
+    .contact-info-2 {
+        text-align: center;
+        margin-top: 45px;
+    }
