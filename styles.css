@@ -290,7 +290,7 @@
     /*-------------------contacts----------------*/
     
     .main-block_contacts {
-        padding-bottom: 123px;
+        padding-bottom: 30px;
     }
     
     .contacts-title {
@@ -323,7 +323,6 @@
     .contacts-button {
         display: flex;
         justify-content: center;
-        margin-bottom: 85px;
     }
     
     button {
@@ -367,4 +366,90 @@
     .contact-info-2 {
         text-align: center;
         margin-top: 45px;
+    }
+    
+    .form-popup {
+        display: none;
+        position: fixed;
+        bottom: 0;
+        right: 15px;
+        z-index: 9;
+        box-shadow: 0px 2px 10px 5px rgba(161, 158, 158, 0.5);
+    }
+    
+    @keyframes show {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    
+    .form-container {
+        opacity: 0;
+        /*Элемент полностью прозрачный (невидимый)*/
+        transition: 1s;
+        /*Скорость перехода состояния элемента*/
+        animation: show 2s 1;
+        /* Указываем название анимации, её время и количество повторов*/
+        animation-fill-mode: forwards;
+        /* Чтобы элемент оставался в конечном состоянии анимации */
+        animation-delay: 0s;
+        /* Задержка перед началом */
+        display: flex;
+        flex-direction: column;
+        max-width: 300px;
+        padding: 10px;
+        background-color: white;
+    }
+    
+    .form-container input[type=text],
+    .form-container input[type=password] {
+        width: 100%;
+        padding: 15px;
+        margin: 5px 0 22px 0;
+        border: none;
+        background: #f1f1f1;
+    }
+    
+    .form-container input[type=text]:focus,
+    .form-container input[type=password]:focus {
+        background-color: #ddd;
+        outline: none;
+    }
+    
+    .form-container .btn {
+        background: #070707;
+        color: #fff;
+        margin: 8px 13px 28px 8px;
+        border-radius: 30px;
+        width: 140px;
+        height: 32px;
+        text-decoration: none;
+        text-align: center;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 22px;
+        box-shadow: 1px 1px 0px 0px rgba(0, 0, 0, 0.5)
+    }
+    
+    .form-container .cancel {
+        background: #070707;
+        color: #fff;
+        margin: 8px 13px 28px 8px;
+        border-radius: 30px;
+        width: 140px;
+        height: 32px;
+        text-decoration: none;
+        text-align: center;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 22px;
+        box-shadow: 1px 1px 0px 0px rgba(0, 0, 0, 0.5)
+    }
+    
+    .form-container .btn:hover,
+    .open-button:hover {
+        opacity: 1;
     }
