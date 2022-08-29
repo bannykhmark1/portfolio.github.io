@@ -24,11 +24,17 @@ hamb.addEventListener("click", hambHandler);
 
 function hambHandler(e) {
     e.preventDefault();
-    popup.classList.toggle("open");
+    popup.classList.toggle("popup_open");
     hamb.classList.toggle("active");
     renderPopup();
 }
 
 function renderPopup() {
-    popup.appendChild(menu);
+    const hasChild = popup.childNodes.length > 0;
+
+    if (hasChild) {
+        popup.innerHTML = '';
+    } else {
+        popup.appendChild(menu);
+    }
 }

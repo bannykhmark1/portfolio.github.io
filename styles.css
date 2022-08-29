@@ -3,12 +3,11 @@
         text-decoration: none;
     }
     
-    a:visited {
+    a:active {
         color: #000;
     }
     
     a:hover {
-        text-decoration: none;
         color: #000;
     }
     
@@ -23,10 +22,10 @@
     }
     
     body {
+        margin: 0;
         height: 100%;
         line-height: 1;
         font-size: 18px;
-        margin: 0;
         padding: 0;
         color: #828282;
         font-family: Gilroy;
@@ -62,8 +61,10 @@
     }
     
     .nav-item {
+        font-size: 18px;
+        line-height: 22px;
         font-weight: 700;
-        line-height: 88%;
+        color: #828282;
     }
     
     .nav-list {
@@ -79,12 +80,53 @@
         display: none;
     }
     
+    .translate {
+        display: none;
+    }
+    
+    .ru,
+    .en {
+        margin-bottom: 20px;
+        font-size: 34px;
+        line-height: 42px;
+        color: #828282;
+        font-weight: bold;
+        border: none;
+        background-color: #fff;
+    }
+    
     @media (max-width: 940px) {
-        .header {}
+        .nav-item {
+            color: #828282;
+            text-decoration: none;
+        }
+        button:visited {
+            color: #000;
+        }
+        button:hover {
+            text-decoration: none;
+            color: #000;
+        }
+        .header {
+            margin-top: 25px;
+        }
+        .nav-item:not(:last-child) {
+            margin-bottom: 68px;
+        }
+        .nav-item {
+            font-size: 34px;
+            line-height: 42px;
+        }
+        .nav-list {
+            flex-direction: column;
+        }
+        .nav-item {
+            margin-bottom: 10px;
+        }
         .menu-burger__header {
-            position: absolute;
-            display: block;
-            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0px;
             cursor: pointer;
         }
         .header__menu {
@@ -99,20 +141,6 @@
         .header__container {
             border: none;
         }
-        .popup {
-            position: fixed;
-            top: 75px;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background-color: #fff;
-            z-index: 100;
-            display: flex;
-            transition: 0.3s;
-        }
-        .popup .open {
-            left: 0;
-        }
         .popup .menu {
             width: 100%;
             height: 100%;
@@ -123,10 +151,26 @@
             padding: 50px 0;
             overflow: auto;
         }
+        .translate {
+            margin-bottom: 20px;
+            font-size: 34px;
+            line-height: 42px;
+            color: #828282;
+            transform: rotate(90deg);
+            font-weight: bold;
+            display: block;
+            margin-right: -260px;
+            margin-top: 300;
+        }
     }
     
-    .popup {
-        display: none;
+    .popup_open {
+        width: 100%;
+        top: 70px;
+        height: 100vh;
+        background-color: #fff;
+        z-index: 100;
+        transition: 0.3s;
     }
     /*--------------------------main*/
     
@@ -151,15 +195,19 @@
     }
     
     @media (max-width: 940px) {
+        body {}
+        .main-block_name_desctop {
+            display: none;
+        }
+        .main-block_name {
+            font-size: 32px!important;
+            line-height: 30px!important;
+        }
         .main {
-            margin-top: 65px;
+            margin-top: 0px;
         }
         .main-block_skills-programs {
             flex-direction: column;
-        }
-        .main-block-name {
-            font-size: 47px;
-            line-height: 58px;
         }
         .main-block_info {
             display: flex;
@@ -173,11 +221,16 @@
         .js {
             margin-bottom: 80px;
         }
-        .main-block_photo-mobile {
-            margin: auto;
-            width: 100%;
-            height: 478px;
-            background: #000 url(img/bg2mobile.png);
+        .main-block_me {}
+        .main-block_photo {
+            background-image: url(img/bg2mobile.png)!important;
+            background-size: cover;
+        }
+        ._container {
+            margin: 0 28px 0 28px;
+        }
+        .contacts-socials :not(:last-child) img {
+            padding-right: 30px;
         }
     }
     
@@ -208,12 +261,11 @@
     }
     
     .main-block_photo {
-        width: 100%;
+        background-image: url(img/bg2.png);
+        background-size: cover;
         height: 388px;
-        background: #000 url(img/bg2.png);
-        /* Фоновый цвет и фоновый рисунок*/
         color: #fff;
-        /*Цвет текста на странице*/
+        width: 100%;
     }
     /*-------Biography ---------*/
     
@@ -342,6 +394,11 @@
     .main-block_prortfolio {
         padding-bottom: 90px;
     }
+    
+    .main-block__name-and-burger {
+        display: flex;
+        justify-content: space-between;
+    }
     /*-------------------contacts----------------*/
     
     .main-block_contacts {
@@ -380,7 +437,7 @@
         justify-content: center;
     }
     
-    button {
+    .contacts-button>button {
         background: #070707;
         /* Цвет фона */
         color: #fff;
@@ -412,10 +469,11 @@
         height: 40px;
     }
     
-    .vk,
-    .tg,
-    .inst {
-        padding-right: 60px;
+    @media (min-width: 941px) {
+        ._container {}
+        .contacts-socials :not(:last-child) img {
+            padding-right: 60px;
+        }
     }
     
     .contact-info-2 {
