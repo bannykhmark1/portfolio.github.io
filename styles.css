@@ -1,5 +1,15 @@
     a {
+        color: #828282;
         text-decoration: none;
+    }
+    
+    a:visited {
+        color: #000;
+    }
+    
+    a:hover {
+        text-decoration: none;
+        color: #000;
     }
     
     ._black {
@@ -24,10 +34,12 @@
     
     ._container {
         max-width: 940px;
+        height: 100%;
         margin: 0px auto;
     }
     
     .wrapper {
+        width: 100%;
         min-height: 100%;
         overflow: hidden;
         display: flex;
@@ -63,16 +75,58 @@
         justify-content: space-between;
     }
     
-    @media (max-width: 420px) {
-        .nav-item:not(:last-child) {
-            margin-right: 25px;
+    .menu-burger__header {
+        display: none;
+    }
+    
+    @media (max-width: 940px) {
+        .header {}
+        .menu-burger__header {
+            position: absolute;
+            display: block;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        .header__menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transition: left 0.3s ease 0s;
+        }
+        .header__container {
+            border: none;
+        }
+        .popup {
+            position: fixed;
+            top: 75px;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            z-index: 100;
+            display: flex;
+            transition: 0.3s;
+        }
+        .popup .open {
+            left: 0;
+        }
+        .popup .menu {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: start;
+            padding: 50px 0;
+            overflow: auto;
         }
     }
     
-    @media (max-width: 999px) {
-        ._container {
-            max-width: 95%;
-        }
+    .popup {
+        display: none;
     }
     /*--------------------------main*/
     
@@ -94,6 +148,37 @@
         display: flex;
         justify-content: space-between;
         margin-bottom: 50px;
+    }
+    
+    @media (max-width: 940px) {
+        .main {
+            margin-top: 65px;
+        }
+        .main-block_skills-programs {
+            flex-direction: column;
+        }
+        .main-block-name {
+            font-size: 47px;
+            line-height: 58px;
+        }
+        .main-block_info {
+            display: flex;
+            flex-direction: column;
+        }
+        .main-block_translate {
+            display: none;
+        }
+        .vscode,
+        .git,
+        .js {
+            margin-bottom: 80px;
+        }
+        .main-block_photo-mobile {
+            margin: auto;
+            width: 100%;
+            height: 478px;
+            background: #000 url(img/bg2mobile.png);
+        }
     }
     
     .main-block_name {
@@ -123,44 +208,12 @@
     }
     
     .main-block_photo {
-        height: 100%;
-        background: #000 url(img/bg2.jpg);
+        width: 100%;
+        height: 388px;
+        background: #000 url(img/bg2.png);
         /* Фоновый цвет и фоновый рисунок*/
         color: #fff;
         /*Цвет текста на странице*/
-    }
-    
-    @media (max-width: 540px) {
-        .main-block_translate {
-            font-size: 12px;
-        }
-    }
-    
-    @media (max-width: 450px) {
-        .main-block_translate {
-            font-size: 12px;
-        }
-    }
-    
-    @media (max-width: 520px) {
-        .main-block_me {
-            font-size: 16px;
-        }
-    }
-    
-    @media (max-width: 450px) {
-        .main-block_me {
-            font-size: 14px;
-            max-width: 170px;
-        }
-    }
-    
-    @media (max-width: 520px) {
-        .main-block_name {
-            line-height: 23px;
-            max-width: 130px;
-            font-size: 20px;
-        }
     }
     /*-------Biography ---------*/
     
@@ -270,8 +323,10 @@
     .portfolio-projects {}
     
     .portfolio-projects img {
-        width: 937px;
-        height: 510px;
+        display: block;
+        margin: auto;
+        width: 95%;
+        height: 100%;
     }
     
     .portfolio-projects a {
@@ -366,6 +421,7 @@
     .contact-info-2 {
         text-align: center;
         margin-top: 45px;
+        margin-bottom: 45px;
     }
     
     .form-popup {
@@ -389,7 +445,7 @@
     .form-container {
         opacity: 0;
         /*Элемент полностью прозрачный (невидимый)*/
-        transition: 1s;
+        transition: 0.5s ease 0s;
         /*Скорость перехода состояния элемента*/
         animation: show 2s 1;
         /* Указываем название анимации, её время и количество повторов*/

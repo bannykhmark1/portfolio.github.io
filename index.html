@@ -7,22 +7,30 @@
     <link rel="stylesheet" href="styles.css">
     <title>Mark Bannykh</title>
     <link rel="stylesheet" href="https://cdn.rawgit.com/mfd/09b70eb47474836f25a21660282ce0fd/raw/e06a670afcb2b861ed2ac4a1ef752d062ef6b46b/Gilroy.css">
-    <script src="js/script.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 
 <body>
+
     <div class="wrapper">
-        <header class="header">
+        <header class="header" id="header">
             <div class="header__container _container">
+                <div class="menu-burger__header" id="hamb">
+                    <span>
+                        <img src="img/hamb.svg" alt="hamb-menu" class="hamb-img">
+                    </span>
+                </div>
                 <nav class="header__menu _container">
-                    <ul class="nav-list">
-                        <li class="nav-item _black">Home</li>
-                        <li class="nav-item">About me</li>
-                        <li class="nav-item">Skills</li>
-                        <li class="nav-item">Portfolio</li>
-                        <li class="nav-item">Contacts</li>
+                    <ul class="nav-list" id="menu">
+                        <li class="nav-item"><a href="#header">Home</a></li>
+                        <li class="nav-item"><a href="#about-me">About me</a></li>
+                        <li class="nav-item"><a href="#skills">Skills</a></li>
+                        <li class="nav-item"><a href="#portfolio">Portfolio</a></li>
+                        <li class="nav-item"><a href="#contacts">Contacts</a></li>
                     </ul>
                 </nav>
+                <div class="popup" id="popup"></div>
             </div>
         </header>
 
@@ -41,10 +49,11 @@
                         </div>
                     </div>
                     <div class="main-block_photo _container">
-                        <img src="img/bg2.jpg" alt="bg">
+
                     </div>
+
                 </div>
-                <div class="main-block__biography grey">
+                <div class="main-block__biography grey" id="about-me">
                     <div class="main-block_biography _container">
                         <div class="main-block_about-me">
                             <h1>About me</h1>
@@ -57,7 +66,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="main-block_skills _container">
+                <div class="main-block_skills _container" id="skills">
                     <div class="skills">
                         <h1>Skills</h1>
                     </div>
@@ -111,7 +120,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="main-block__portfolio grey ">
+                <div class="main-block__portfolio grey" id="portfolio">
                     <div class="main-block_prortfolio _container">
                         <div class="portfolio-title">
                             <h1>Portfolio</h1>
@@ -124,7 +133,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="main-block__contacts">
+                <div class="main-block__contacts" id="contacts">
                     <div class="main-block_contacts _container">
                         <div class="contacts-title">
                             <h1>Contacts</h1>
@@ -163,6 +172,7 @@
     </div>
     </main>
     </div>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
