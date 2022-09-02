@@ -53,6 +53,7 @@ function renderPopup() {
         popup.innerHTML = '';
     } else {
         popup.appendChild(menu);
+        popup.appendChild(translate);
     }
 
 }
