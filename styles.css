@@ -123,6 +123,7 @@ body {
         margin-bottom: 10px;
     }
     .menu-burger__header {
+        visibility: visible;
         position: absolute;
         display: block;
         top: 0;
@@ -143,6 +144,7 @@ body {
         border: none;
     }
     .popup .menu {
+        position: absolute;
         width: 100%;
         height: 100%;
         display: flex;
