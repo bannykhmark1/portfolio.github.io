@@ -17,11 +17,8 @@
         <header class="header" id="header">
             <div class="header__container _container">
                 <div class="menu-burger__header" id="hamb">
-                    <div class="main-block_name">
-                        Bannykh Mark
-                    </div>
                     <span>
-                        <img src="img/hamb.svg" alt="hamb-menu" class="hamb-img">
+                        <img src="img/hamb.svg" alt="hamb-menu" class="hamb-img" id="imgToSwitch" onclick="switchImgAndMargin()">
                     </span>
                 </div>
                 <nav class="header__menu _container">
@@ -31,19 +28,20 @@
                         <li class="nav-item"><a href="#skills">Skills</a></li>
                         <li class="nav-item"><a href="#portfolio">Portfolio</a></li>
                         <li class="nav-item"><a href="#contacts">Contacts</a></li>
-                        <li class="translate"><button class="ru" id="ru">ENG</button> | <button class="en" id="en">RU</button></li>
-                    </ul>
+                        <li class="translate" id="translate">
+                            ENG | RU
+                        </li>
 
+                    </ul>
                 </nav>
                 <div class="popup" id="popup"></div>
             </div>
         </header>
-
         <main class="main">
             <div class="main__main-block main-block">
                 <div class="main-block__container _container">
                     <div class="main-block_info">
-                        <div class="main-block_name main-block_name_desctop">
+                        <div class="main-block_name">
                             Bannykh Mark
                         </div>
                         <div class="main-block_me">
@@ -54,16 +52,13 @@
                         </div>
                     </div>
                     <div class="main-block_photo">
-
                     </div>
-
                 </div>
                 <div class="main-block__biography grey" id="about-me">
                     <div class="main-block_biography _container">
                         <div class="main-block_about-me">
                             <h1>About me</h1>
                         </div>
-
                         <div class="main-block_about-me-info">
                             <p>Hi! I'm Mark, I'm 20, an aspiring front-end developer from Ekaterinburg. I was very interested in front-end development</p>
                             <p>I am studying at the Ural State University of Economics in the specialty "Mathematical support of information systems".</p>
