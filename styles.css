@@ -291,6 +291,7 @@ body {
 }
 
 .main-block_biography {
+    margin: 0 auto;
     padding-top: 120px;
     padding-bottom: 107px;
     max-width: 480px;
@@ -298,6 +299,7 @@ body {
 
 .main-block_about-me {
     text-align: center;
+    margin: 0;
     font-weight: 700;
     color: #070707;
     line-height: 42px;
@@ -398,6 +400,7 @@ body {
 .portfolio-projects img {
     display: block;
     margin: auto;
+    margin-top: 50px;
     width: 95%;
     height: 100%;
 }
