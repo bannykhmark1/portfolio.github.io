@@ -99,6 +99,8 @@ body {
         text-decoration: none;
     }
     .main-block__name {}
+
+    
     button:visited {
         color: #000;
     }
@@ -175,6 +177,12 @@ body {
 
 /*--------------------------main*/
 
+.main-block_photo_container {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
 .cross {
     position: absolute;
     right: 0;
@@ -234,10 +242,18 @@ body {
     .main-block_me {
         margin-top: 25px;
     }
+
     .main-block_photo {
-        background-image: url(img/bg2mobile.png)!important;
-        height: 100%;
+        background-image: url(img/bg2mobile.png)!important; 
+        width: 100%;
+  
+        background-repeat: no-repeat;
+        background-size:contain;
+        height: 800px;
+
     }
+
+
     ._container {
         margin: 0 28px 0 28px;
     }
@@ -275,13 +291,6 @@ body {
     line-height: 22px;
 }
 
-.main-block_photo {
-    background-image: url(img/bg2.png);
-    background-size: cover;
-    height: 388px;
-    color: #fff;
-    width: 99%;
-}
 
 
 /*-------Biography ---------*/
@@ -291,13 +300,18 @@ body {
 }
 
 .main-block_biography {
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 6px auto;
     padding-top: 120px;
+    height: 100%;
     padding-bottom: 107px;
-    max-width: 480px;
+    width: 450px;
 }
 
 .main-block_about-me {
+
     text-align: center;
     margin: 0;
     font-weight: 700;
@@ -496,6 +510,15 @@ body {
 }
 
 @media (min-width: 941px) {
+
+    
+.main-block_photo {
+    background-image: url(img/bg2.png);
+    background-size: cover;
+    height: 400px;
+    color: #fff;
+    width: 99%;
+}
     .main-block_me {
         margin-top: 60px;
     }
