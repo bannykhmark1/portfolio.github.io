@@ -84,6 +84,8 @@ body {
 
 .ru,
 .en {
+    writing-mode: tb-rl;
+    transform: rotate(-180deg);
     margin-bottom: 20px;
     font-size: 34px;
     line-height: 42px;
@@ -246,7 +248,7 @@ body {
     .main-block_photo {
         background-image: url(img/bg2mobile.png)!important; 
         width: 100%;
-  
+        background-position: center;
         background-repeat: no-repeat;
         background-size:contain;
         height: 800px;
@@ -281,7 +283,7 @@ body {
     visibility: hidden;
 }
 
-.main-block_translate {
+.main-block_translate, .en, .ru {
     margin-bottom: 20px;
     writing-mode: tb-rl;
     transform: rotate(-180deg);
